@@ -4,10 +4,10 @@
 
 ### 方式一：使用启动脚本（推荐）
 
-\`\`\`bash
+```bash
 cd memory-game
 ./start.sh
-\`\`\`
+```
 
 按照提示选择操作即可。
 
@@ -15,32 +15,32 @@ cd memory-game
 
 #### 1. 安装依赖
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 **注意**: 如果安装速度慢，可以使用国内镜像：
 
-\`\`\`bash
+```bash
 npm config set registry https://registry.npmmirror.com
 npm install
-\`\`\`
+```
 
 #### 2. 开发模式
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 浏览器会自动打开 http://localhost:3000
 
 #### 3. 构建生产版本
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
-构建产物在 \`dist/\` 目录。
+构建产物在 `dist/` 目录。
 
 ## 📱 打包成移动端App
 
@@ -52,22 +52,22 @@ npm run build
 
 2. **初始化 Android 项目（首次）**
 
-\`\`\`bash
+```bash
 npm install @capacitor/android
 npx cap add android
-\`\`\`
+```
 
 3. **构建并同步**
 
-\`\`\`bash
+```bash
 npm run mobile
-\`\`\`
+```
 
 4. **打开 Android Studio**
 
-\`\`\`bash
+```bash
 npm run android
-\`\`\`
+```
 
 在 Android Studio 中：
 - 点击 Run 按钮 (绿色三角形) 运行到模拟器
@@ -80,22 +80,22 @@ npm run android
 
 2. **初始化 iOS 项目（首次）**
 
-\`\`\`bash
+```bash
 npm install @capacitor/ios
 npx cap add ios
-\`\`\`
+```
 
 3. **构建并同步**
 
-\`\`\`bash
+```bash
 npm run mobile
-\`\`\`
+```
 
 4. **打开 Xcode**
 
-\`\`\`bash
+```bash
 npm run ios
-\`\`\`
+```
 
 在 Xcode 中：
 - 选择模拟器或真机
@@ -115,9 +115,9 @@ npm run ios
 
 ### 修改卡片数量
 
-编辑 \`src/components/MemoryGame.tsx\`:
+编辑 `src/components/MemoryGame.tsx`:
 
-\`\`\`typescript
+```typescript
 // 修改这里的数组
 const EMOJIS = ['🎮', '🎨', '🎭', '🎪', '🎯', '🎲', '🎸', '🎹'];
 
@@ -125,13 +125,13 @@ const EMOJIS = ['🎮', '🎨', '🎭', '🎪', '🎯', '🎲', '🎸', '🎹'];
 // 例如：
 const EMOJIS = ['🎮', '🎨', '🎭', '🎪', '🎯', '🎲', '🎸', '🎹', '🎺', '🎻'];
 // 会变成 20 张卡片（10 对）
-\`\`\`
+```
 
 ### 修改颜色
 
-编辑 \`tailwind.config.js\`:
+编辑 `tailwind.config.js`:
 
-\`\`\`javascript
+```javascript
 colors: {
   primary: '#4ecdc4',      // 主要颜色（卡片背景）
   secondary: '#f5576c',    // 次要颜色（按钮、完成图标）
@@ -139,20 +139,20 @@ colors: {
   darker: '#0f0f23',       // 更深的背景
   accent: '#44a08d',       // 强调色
 },
-\`\`\`
+```
 
 ### 修改游戏难度
 
-编辑 \`src/components/MemoryGame.tsx\` 中的计分逻辑：
+编辑 `src/components/MemoryGame.tsx` 中的计分逻辑：
 
-\`\`\`typescript
+```typescript
 const calculateScore = () => {
   const baseScore = 1000;           // 基础分
   const timePenalty = gameState.time * 5;   // 时间惩罚（每秒扣5分）
   const movesPenalty = gameState.moves * 10;  // 步数惩罚（每步扣10分）
   return Math.max(0, baseScore - timePenalty - movesPenalty);
 };
-\`\`\`
+```
 
 ## 📸 预览效果
 
@@ -168,9 +168,9 @@ const calculateScore = () => {
 ### Q: npm install 失败怎么办？
 
 A: 尝试以下方法：
-1. 清理缓存: \`npm cache clean --force\`
+1. 清理缓存: `npm cache clean --force`
 2. 删除 node_modules 和 package-lock.json，重新安装
-3. 使用国内镜像: \`npm config set registry https://registry.npmmirror.com\`
+3. 使用国内镜像: `npm config set registry https://registry.npmmirror.com`
 
 ### Q: Android Studio 打开项目后报错？
 
@@ -187,7 +187,7 @@ A: 检查设备性能，降低动画数量或简化样式。
 
 ### 构建流程
 
-\`\`\`
+```
 React 组件 
   ↓ (Vite 构建)
 dist/ 目录
@@ -195,7 +195,7 @@ dist/ 目录
 Android/iOS 项目
   ↓ (Android Studio/Xcode)
 APK/IPA 安装包
-\`\`\`
+```
 
 ### 核心技术
 

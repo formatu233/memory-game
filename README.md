@@ -20,61 +20,61 @@
 
 ### 1. 安装依赖
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### 2. 开发模式（浏览器）
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 ### 3. 构建生产版本
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 ## 📱 打包成移动端App
 
 ### Android
 
 1. 添加 Android 平台（首次）：
-   \`\`\`bash
+   ```bash
    npm install @capacitor/android
    npx cap add android
-   \`\`\`
+   ```
 
 2. 构建并同步：
-   \`\`\`bash
+   ```bash
    npm run mobile
-   \`\`\`
+   ```
 
 3. 打开 Android Studio：
-   \`\`\`bash
+   ```bash
    npm run android
-   \`\`\`
+   ```
 
 4. 在 Android Studio 中构建 APK 或直接运行到设备
 
 ### iOS
 
 1. 添加 iOS 平台（首次，需要 macOS）：
-   \`\`\`bash
+   ```bash
    npm install @capacitor/ios
    npx cap add ios
-   \`\`\`
+   ```
 
 2. 构建并同步：
-   \`\`\`bash
+   ```bash
    npm run mobile
-   \`\`\`
+   ```
 
 3. 打开 Xcode：
-   \`\`\`bash
+   ```bash
    npm run ios
-   \`\`\`
+   ```
 
 4. 在 Xcode 中构建 IPA 或直接运行到设备
 
@@ -90,7 +90,7 @@ npm run build
 
 ## 📂 项目结构
 
-\`\`\`
+```
 memory-game/
 ├── src/
 │   ├── components/
@@ -108,29 +108,29 @@ memory-game/
 ├── vite.config.ts            # Vite 配置
 ├── tsconfig.json             # TypeScript 配置
 └── package.json              # 项目配置
-\`\`\`
+```
 
 ## 🎨 自定义
 
 ### 修改卡片数量
 
-编辑 \`src/components/MemoryGame.tsx\` 中的 \`EMOJIS\` 数组：
+编辑 `src/components/MemoryGame.tsx` 中的 `EMOJIS` 数组：
 
-\`\`\`typescript
+```typescript
 const EMOJIS = ['🎮', '🎨', '🎭', '🎪', '🎯', '🎲', '🎸', '🎹'];
-\`\`\`
+```
 
 ### 修改颜色主题
 
-编辑 \`tailwind.config.js\` 中的颜色配置：
+编辑 `tailwind.config.js` 中的颜色配置：
 
-\`\`\`javascript
+```javascript
 colors: {
   primary: '#4ecdc4',
   secondary: '#f5576c',
   // ...
 }
-\`\`\`
+```
 
 ## 📋 系统要求
 
